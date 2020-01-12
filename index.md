@@ -21,8 +21,6 @@ excerpt: 'Σχεδιασμός και κατασκευή συνεργατικώ�
 
   {% include feature_col.html id="gallery" type="center" index=random %}
 
-  {% assign random = site.time | date: "%s%N" | modulo: site.case-study.size %}
-
-  {% include feature_col.html id="case-study" type="right" index=random %}
+  <div><a class="twitter-timeline" href="https://twitter.com/38Alexandros?ref_src=twsrc%5Etfw" data-width="200" data-height="200" >Tweets by 38Alexandros</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script></div>
 
 <div>
