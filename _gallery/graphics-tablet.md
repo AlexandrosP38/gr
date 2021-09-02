@@ -2,9 +2,9 @@
 author: Alexandros Politis
 title: Graphics Tablet
 image_url: /images/graphic-tablet.jpg
-caption: 'Οι υπολογιστές Macintosh είναι μια κατηγορία Personal Computer (προσωπικός υπολογιστής) που κατασκευάζονται απο την εταιρεία Apple Inc. Η διαθεσή τους ξεκίνησε το 1984 σε παρουσίαση που έγινε απο τον Steve Jobs.'
-license_url: 'https://www.pexels.com/photo/turned-on-black-laptop-computer-on-table-2148217/'
-license_text: Mac PC photo from Luis Quintero
+caption: 'Oι γραφίδες ταμπλέτε είναι μια συσκεύη εισόδου για υπολογιστή. Επιτρέπει στον χρήστη με ένα ειδικό στυλό pen γράφωντας ή ζωγραφίζοντας πάνω σε μια ειδική επιφάνεια να αποτυπώσει στον υπολογιστή εικόνες που σχεδιάζει.'
+license_url: 'https://unsplash.com/photos/CGpifH3FjOA'
+license_text: Graphic designer working on a Macbook laptop using a trackpad, color charts and markers
 categories:
   - graphics tablet
   - digitizer
