@@ -5,10 +5,10 @@ header:
   overlay_filter: "0.5"
   overlay_image: /images/header/header.jpg
   cta_label: "Download"
-  cta_label: "Διαβάστε ένα δωρεάν δείγμα"
+  cta_label: "Διαβάστε ένα δωρεάν απόσπασμα"
   cta_url: "https://leanpub.com/pibook"
   caption: "Δικαιώματα εικόνας: [**SRI International**](https://www.sri.com)"
-excerpt: 'Σχεδιασμός και κατασκευή συνεργατικών συστήματων για ένα οικοσύστημα χρηστών, συσκευών, και υπηρεσιών.'
+excerpt: 'Σχεδιασμός και κατασκευή συνεργατικών συστήματων για ένα οικοσύστημα συσκευών και υπηρεσιών.'
 ---
 
 <div class="feature__wrapper">
@@ -21,6 +21,8 @@ excerpt: 'Σχεδιασμός και κατασκευή συνεργατικώ�
 
   {% include feature_col.html id="gallery" type="center" index=random %}
 
-  <div><a class="twitter-timeline" href="https://twitter.com/38Alexandros?ref_src=twsrc%5Etfw" data-width="300" data-height="300" >Tweets by 38Alexandros</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script></div>
+  {% assign random = site.time | date: "%s%N" | modulo: site.case-study.size %}
+
+  {% include feature_col.html id="case-study" type="right" index=random %}
 
 <div>

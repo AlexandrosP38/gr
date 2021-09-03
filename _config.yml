@@ -4,18 +4,19 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
-#theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes"
+
+theme: minimal-mistakes-jekyll
+# remote_theme: "mmistakes/minimal-mistakes"
 
 # Site Settings
 locale                   : "gr-GR"
 title                    : "Ο Προγραμματισμός της Διάδρασης"
 title_separator          : "-"
-name                     : "mibook"
-description              : "Making Interactivity Greek Book."
-url                      : "https://AlexandrosP38.github.io"
-baseurl                  : "/gr"
-repository               : "AlexandrosP38/gr"
+name                     : "pibook"
+description              : "Programming Interactivity Greek Book."
+url                      : "https://pibook.epidro.me"
+baseurl                  : ""
+repository               : "epidrome/pibook"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -58,20 +59,20 @@ social:
 
 # Site Author
 author:
-  name             : "Making Interactivity Greek Book"
+  name             : "Konstantinos Chorianopoulos"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              :
   location         :
   email            :
   uri              :
-  home             : "https://AlexandrosP38.github.io/gr"
+  home             : "https://www.epidro.me"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "mibook"
+  github           : "epidrome"
   gitlab           :
   google_plus      :
   keybase          :
@@ -154,7 +155,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+#permalink: /:categories/:title/
 #paginate: 5 # amount of posts to show
 #paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -168,6 +169,9 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-tagories
+  - jekyll-remote-theme
+  - jekyll-scholar
 
 
 # Archives
@@ -181,23 +185,11 @@ plugins:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: liquid 
   path: /categories/
 tag_archive:
-  type: liquid
+  type: liquid 
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
 
 # HTML Compression
 # - http://jch.penibelst.de/
@@ -210,6 +202,15 @@ compress_html:
 #collections_dir: collections
 
 collections:
+  chapter:
+    output: true
+    permalink: /chapter/:path/
+  timeline:
+    output: true
+    permalink: /timeline/:path/
+  slides:
+    output: true
+    permalink: /slides/:path/
   making:
     output: true
     permalink: /making/:path/
@@ -255,16 +256,43 @@ defaults:
       related: true
   - scope:
       path: ""
-      type: gallery
+      type: chapter 
     values:
-      layout: gallery-figure
+      layout: single 
+      header: no
+  - scope:
+      path: ""
+      type: timeline 
+    values:
+      layout: timeline 
+      header: no
+      show_meta: false
+  - scope:
+      path: ""
+      type: slides
+    values:
+      layout: slides
+      header: no
+      show_meta: false
+  - scope:
+      path: ""
+      type: gallery 
+    values:
+      layout: image 
+      header: no
+      show_meta: false
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: single
       header: no
       show_meta: false
   - scope:
       path: ""
       type: quotes
     values:
-      layout: single
+      layout: quotes
       header: no
       show_meta: false
   - scope:
@@ -281,3 +309,16 @@ defaults:
       layout: single
       header: no
       show_meta: false
+  - scope:
+      path: ""
+      type: tag
+    values:
+      comments: false 
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
+
+scholar:
+  style: modern-language-association

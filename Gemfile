@@ -9,11 +9,11 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 #
-# local production 
-gem 'jekyll','3.8.6'
+gem 'jekyll'
+gem 'minimal-mistakes-jekyll'
 
-# deployment
-#gem "github-pages", group: :jekyll_plugins
+# Github Pages deployment
+# gem "github-pages", group: :jekyll_plugins
 
 gem "tzinfo-data"
 
@@ -26,5 +26,7 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
+  gem 'jekyll-tagories'
   gem 'jekyll-remote-theme'
+  gem 'jekyll-scholar'
 end
